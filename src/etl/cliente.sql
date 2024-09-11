@@ -11,6 +11,7 @@ with tb_join as (
 ),
 tb_grouped as (
     select idVendedor,
+        count(DISTINCT descUf) as qtdePedidoUfs,
         cast(
             count(
                 distinct case
